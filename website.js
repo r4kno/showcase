@@ -7,7 +7,6 @@ window.addEventListener('load', ()=>{
     })
 })
 
-
 //Show cards when are in view
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry =>{
@@ -35,7 +34,7 @@ document.body.onpointermove = event =>{
 
 //play video on hover for big screens and on view for small screens
 document.querySelectorAll('.card video').forEach(video =>{
-    if(window.innerWidth > 1080){
+    if(window.innerWidth > 1081){
     video.addEventListener('mouseenter' , ()=>{
         video.play();
     });
