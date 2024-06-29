@@ -111,13 +111,6 @@ h2{
 .card p{
     margin-bottom: 10px;
 }
-.big-card{
-    width: 1000px;
-    height: 900px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .card video {
     aspect-ratio: 9/16;
     object-fit: cover;
@@ -125,7 +118,6 @@ h2{
 .card-content {
     padding: 10px;
     margin: 20px;
-    flex: 1;
 }
 .hidden,
 .hidden1{
@@ -156,7 +148,7 @@ h2{
 }
 @media (max-width:1080px) {
     .card{
-        width: 90%;
+        width: auto;
         height: auto;
         }
     .card video{
@@ -164,8 +156,8 @@ h2{
         aspect-ratio: 9/16;
 }
     .btn{
-        width: 100px;
-        height: 50px;
+        width: 20vw;
+        height: 10vw;
         margin-bottom: 20px;
     }
     .track-container{
@@ -187,7 +179,7 @@ h2{
         justify-content: center;
     }
     .rimg{
-        margin-top: 30%;
+        margin-top: 30vmin;
     }
 
 }

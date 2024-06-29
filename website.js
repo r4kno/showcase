@@ -45,7 +45,8 @@ document.body.onpointermove = event =>{
     }, {duration: 3000, fill: "forwards"});
 
 }
-
+console.log(window.innerWidth);
+console.log(window.innerHeight);
 //play video on hover for big screens and on view for small screens
 document.querySelectorAll('.card video').forEach(video =>{
     if(window.innerWidth > 1081){
