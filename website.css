@@ -156,11 +156,11 @@ h2{
 }
 @media (max-width:1080px) {
     .card{
-        width: 900px;
+        width: 90%;
         height: auto;
         }
     .card video{
-        width: 900px;
+        width: 100%;
         aspect-ratio: 9/16;
 }
     .btn{
@@ -174,8 +174,8 @@ h2{
         align-items: center;
     }
     #img-track > .image{
-        width: 40%;
-        height: 60%;
+        width: 40vmin;
+        height: 60vmin;
         object-fit: cover;
     }
     #img-track{
