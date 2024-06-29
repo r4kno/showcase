@@ -19,15 +19,29 @@ const observer = new IntersectionObserver(entries => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
+//show images when in view
+const image = document.querySelectorAll('.image');
+image.forEach((image, index) =>{
+    image.style.transitionDelay = `${index * 200}ms`;
+});
+if(window.innerWidth <= 1080){
+    document.querySelectorAll('.hidden1').forEach((el) => observer.observe(el));
+    document.querySelectorAll('.hidden2').forEach((el) => observer.observe(el));
+} else{
+    image.forEach(el =>{
+        el.classList.remove('hidden1');
+        el.classList.remove('hidden2');
+    });
+}
 //following blob
 
 const blob = document.getElementById("blob");
 document.body.onpointermove = event =>{
-    const { pageX , pageY} = event;
+    const { clientX , clientY} = event;
     
     blob.animate({
-        left: `${pageX}px`,
-        top: `${pageY}px`
+        left: `${clientX}px`,
+        top: `${clientY}px`
     }, {duration: 3000, fill: "forwards"});
 
 }
@@ -47,9 +61,8 @@ document.querySelectorAll('.card video').forEach(video =>{
                     entry.target.querySelector('video').play();
                 } else{
                     const video = entry.target.querySelector('video').pause();
-                    if(!video.paused){
-                        video.load();
-                    };
+                    video.load();
+                    
                 };
             });
         } ,{
@@ -60,7 +73,6 @@ document.querySelectorAll('.card video').forEach(video =>{
         observer2.observe(video.closest('.card'))
     };
 });
-
 //move image track on drag
 const track = document.getElementById("img-track");
 function handleStart(e){
@@ -114,7 +126,7 @@ track.addEventListener('mousemove' , (e) =>{
     imgblob.animate({
         left :`${clienX + 50}px`,
         top: `${clienY }px`,
-    },{duration:200, fill:"forwards"});
+    },{duration:600, fill:"forwards"});
 });
 track.addEventListener('mousedown' , () =>{
     imgblob.animate({
@@ -128,7 +140,7 @@ track.addEventListener('mousedown' , () =>{
 
 track.addEventListener('mouseup' , ()=>{
     imgblob.animate({
-        width: `50px`
+        width: `90px`
     }, {duration: 200, fill: "forwards"});
     blobtext.animate({
         opacity: `0`,
