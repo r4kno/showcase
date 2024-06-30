@@ -8,7 +8,7 @@ window.addEventListener('load', ()=>{
 })
 
 //Show cards when are in view
-const observer = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry =>{
         if (entry.isIntersecting){
             entry.target.classList.add('show');
@@ -22,7 +22,7 @@ hiddenElements.forEach((el) => observer.observe(el));
 //show images when in view
 const image = document.querySelectorAll('.image');
 image.forEach((image, index) =>{
-    image.style.transitionDelay = `${index * 200}ms`;
+    image.style.transitionDelay = `${index * 100}ms`;
 });
 if(window.innerWidth <= 1080){
     document.querySelectorAll('.hidden1').forEach((el) => observer.observe(el));

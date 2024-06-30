@@ -98,7 +98,7 @@ h2{
     transition: 0.2s;
 }
 .card {
-    margin: 80px;
+    margin: 8vmin;
     padding-bottom: 25px;
     border-radius: 10px;
     overflow: hidden;
@@ -148,7 +148,7 @@ h2{
 }
 @media (max-width:1080px) {
     .card{
-        width: auto;
+        width: 90vw;
         height: auto;
         }
     .card video{
@@ -164,6 +164,8 @@ h2{
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100vw;
+        
     }
     #img-track > .image{
         width: 40vmin;
@@ -171,17 +173,19 @@ h2{
         object-fit: cover;
     }
     #img-track{
-        margin: 20px;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 10%;
         align-items: center;
         justify-content: center;
     }
+    #blob-text{
+        opacity: 0;
+    }
     .rimg{
         margin-top: 30vmin;
     }
-
 }
 @media (min-width:1081px) {
     .card{
