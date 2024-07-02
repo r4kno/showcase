@@ -7,6 +7,25 @@ window.addEventListener('load', ()=>{
     })
 })
 
+//intro loading animation
+const letter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+const intros = document.querySelectorAll('.render');
+intros.forEach((intro) =>{
+
+    let iterations = 0;
+
+    const interval = setInterval(() =>{
+    intro.innerHTML = intro.innerHTML.split("").map((char, index) => {
+        if(index < iterations){
+            return intro.dataset.value[index];
+        }
+        return letter[Math.floor(Math.random() * 26)];
+    }).join("");
+    if(iterations >= intro.dataset.value.length){ clearInterval(interval)}
+    iterations += 1/2;
+    }, 30);
+});
+
 //Show cards when are in view
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry =>{

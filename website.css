@@ -6,6 +6,9 @@
     -moz-user-select: none;
     -ms-user-select: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     width: 100vw;
     margin: 0;
@@ -67,6 +70,8 @@ h2,
 .intro{
     color: white;
     margin: 1rem;
+    font-family: "space mono", monospace;
+    text-transform: uppercase;
 }
 .card-container {
     display: flex;
