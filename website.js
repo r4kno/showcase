@@ -55,13 +55,13 @@ if(window.innerWidth <= 1080){
 //card button clicks
 
 document.getElementById('btn1').addEventListener('click', () => {
-    window.location.href = 'https://github.com/r4kno/showcase/raw/main/videos/0626.mp4';
+    window.location.href = 'https://github.com/r4kno/showcase/raw/main/videos/fogg_orignal.mp4';
 });
 document.getElementById('btn2').addEventListener('click', () => {
-    window.location.href = 'https://github.com/r4kno/showcase/raw/main/videos/0627.mp4';
+    window.location.href = 'https://github.com/r4kno/showcase/raw/main/videos/bike_orignal.mp4';
 });
 document.getElementById('btn3').addEventListener('click', () => {
-    window.location.href = 'https://github.com/r4kno/showcase/raw/main/videos/0628.mp4';
+    window.location.href = 'https://github.com/r4kno/showcase/raw/main/videos/facewash_orignal.mp4';
 });
 //following blob
 
@@ -77,6 +77,7 @@ document.body.onpointermove = event =>{
 }
 console.log(window.innerWidth);
 console.log(window.innerHeight);
+
 //play video on hover for big screens and on view for small screens
 document.querySelectorAll('.card video').forEach(video =>{
     if(window.innerWidth > 1081){
