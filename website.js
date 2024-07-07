@@ -22,7 +22,7 @@ intros.forEach((intro) =>{
         return letter[Math.floor(Math.random() * 26)];
     }).join("");
     if(iterations >= intro.dataset.value.length){ clearInterval(interval)}
-    iterations += 1/2;
+    iterations += 1/3;
     }, 30);
 });
 
@@ -52,6 +52,17 @@ if(window.innerWidth <= 1080){
         el.classList.remove('hidden2');
     });
 }
+//card button clicks
+
+document.getElementById('btn1').addEventListener('click', () => {
+    window.location.href = 'https://github.com/r4kno/showcase/raw/main/videos/0626.mp4';
+});
+document.getElementById('btn2').addEventListener('click', () => {
+    window.location.href = 'https://github.com/r4kno/showcase/raw/main/videos/0627.mp4';
+});
+document.getElementById('btn3').addEventListener('click', () => {
+    window.location.href = 'https://github.com/r4kno/showcase/raw/main/videos/0628.mp4';
+});
 //following blob
 
 const blob = document.getElementById("blob");
