@@ -179,6 +179,13 @@ h2,
         #000000
     );
 }
+.skill-sec:nth-child(6){
+    background: linear-gradient(
+        to bottom,
+        rgb(79, 10, 10),
+        #000000
+    );
+}
 #after-img-track{
     margin-top: 30vw;
 }
@@ -355,7 +362,7 @@ h2,
     .skill-sec:nth-child(6){
         background: linear-gradient(
             to bottom,
-            rgb(85, 85, 85),
+            rgb(79, 10, 10),
             #000000
         );
     }
